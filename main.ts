@@ -2,10 +2,6 @@ import { generateText } from "ai";
 import { openai } from "@ai-sdk/openai";
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 
-// TODO:
-//  1. Play around some more with the different methods of responses
-// 2. Set up a small db and push a conversation to that.
-
 async function main() {
   const env = config();
   if (env["OPENAI_API_KEY"]) {
@@ -29,7 +25,6 @@ async function main() {
       prompt: userInput, // Replaces messages array for simplicity
     });
 
-    //console.log('result', result.response)
     console.log("\nAssistant:", result.text, "\n");
   }
 }
