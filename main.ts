@@ -21,7 +21,7 @@ async function main() {
     console.log("\nAssistant is thinking...");
 
     const result = await generateText({
-      model: openai("gpt-3.5-turbo"),
+      model: openai("gpt-4o-mini"),
       prompt: userInput, // Replaces messages array for simplicity
     });
 
