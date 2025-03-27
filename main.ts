@@ -13,6 +13,16 @@ async function main() {
     Deno.exit(1);
   }
 
+  const spell = {
+    name: "Fireball",
+    damage: 50,
+    castTime: "1 action",
+  } as const;
+
+  console.log(
+    `You cast ${spell.name} dealing ${spell.damage} damage. It has a casting time of ${spell.castTime}.`,
+  );
+
   while (true) {
     const userInput = prompt("You: ");
     if (userInput === "exit") return false;
