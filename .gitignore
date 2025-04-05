@@ -1,4 +1,4 @@
 .env
 .idea/
 todo.md
-node_module
+node_modules
