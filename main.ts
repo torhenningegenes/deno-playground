@@ -13,15 +13,7 @@ async function main() {
     Deno.exit(1);
   }
 
-  const spell = {
-    name: "Fireball",
-    damage: 50,
-    castTime: "1 action",
-  } as const;
-
-  console.log(
-    `You cast ${spell.name} dealing ${spell.damage} damage. It has a casting time of ${spell.castTime}.`,
-  );
+const systemInstructions = "Answer like a used cars salesmen" // Prompt engineering
 
   while (true) {
     const userInput = prompt("You: ");
@@ -33,6 +25,9 @@ async function main() {
     const result = await generateText({
       model: openai("gpt-4o-mini"),
       prompt: userInput, // Replaces messages array for simplicity
+      system: systemInstructions,
+
+
     });
 
     console.log("\nAssistant:", result.text, "\n");
