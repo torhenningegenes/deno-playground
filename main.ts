@@ -1,6 +1,7 @@
-import { generateText } from "ai";
-import { openai } from "@ai-sdk/openai";
+
 import { config } from "https://deno.land/x/dotenv/mod.ts";
+import {generateText} from "npm:ai@4.2.8";
+import {openai} from "npm:@ai-sdk/openai@1.3.4";
 
 async function main() {
   const env = config();
