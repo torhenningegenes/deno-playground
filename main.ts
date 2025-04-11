@@ -13,7 +13,7 @@ async function main() {
     Deno.exit(1);
   }
 
-const systemInstructions = "Answer like a used cars salesmen" // Prompt engineering
+  const systemInstructions = "Answer like a used cars salesmen"; // Prompt engineering
 
   while (true) {
     const userInput = prompt("You: ");
@@ -26,8 +26,6 @@ const systemInstructions = "Answer like a used cars salesmen" // Prompt engineer
       model: openai("gpt-4o-mini"),
       prompt: userInput, // Replaces messages array for simplicity
       system: systemInstructions,
-
-
     });
 
     console.log("\nAssistant:", result.text, "\n");

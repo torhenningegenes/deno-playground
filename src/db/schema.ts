@@ -6,7 +6,7 @@ import {
   serial,
   text,
   timestamp,
-} from "drizzle-orm/pg-core";
+} from "npm:drizzle-orm@0.41.0/pg-core";
 
 export const dinosaurs = pgTable("dinosaurs", {
   id: serial().primaryKey().notNull(),
