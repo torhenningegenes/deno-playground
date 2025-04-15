@@ -1,7 +1,7 @@
 import { defineConfig } from "drizzle-kit";
 // import { config } from "dotenv";
 //
-// const env = config();
+// const env = config();2
 //
 // if (env["DATABASE_URL"]) {
 //     Deno.env.set("DATABASE_URL", env["DATABASE_URL"]);
